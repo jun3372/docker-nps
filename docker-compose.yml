@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+### Web ################################################
+  nps-server:
+    container_name: "Jun_Nps"
+    image: "nps"
+    ports:
+      - 80 
+      - 443 
+      - 6000 
+      - 8024 
+      - 8080
+      # - "11000-12000:11000-12000"
+      # - "65000-65535:65000-65535/dup"
+    volumes:
+      - ./data:/nps
+    tty: true
