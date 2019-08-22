@@ -5,7 +5,7 @@ services:
 ### Web ################################################
   nps-server:
     container_name: "Jun_Nps"
-    image: "nps"
+    image: "jun3/nps"
     ports:
       - 80 
       - 443 
