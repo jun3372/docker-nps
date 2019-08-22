@@ -11,8 +11,9 @@ LABEL maintainer="Jun <zhoujun3372@gmail.com>"
 RUN apk add --no-cache bash bash-doc bash-completion wget \
     && cd /tmp \
     && wget https://github.com/cnlh/nps/releases/download/v0.23.2/linux_386_server.tar.gz \
-    && tar -zxvf linux_386_server.tar.gz\
-    && cp -rf /tmp/nps /var/local
+    && tar -zxvf linux_386_server.tar.gz \
+    && rm -rf linux_386_server.tar.gz \
+    && cp -rf /tmp/nps /var/local/
 
 RUN mkdir /nps
 
